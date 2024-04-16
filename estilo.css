@@ -24,9 +24,34 @@ header {
     vertical-align: middle; /* alinea la imagen verticalmente */
 }
 
-section {
-    padding: 3px; /* Añade espacio alrededor del contenido */
-    margin: 10px; /* Añade espacio entre las secciones */
-    max-width: 800px; /* Establece el ancho máximo de los párrafos */
-    margin: 0 auto; /* Centra los párrafos horizontalmente */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer ul li a:hover {
+    color: #ff4500;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
