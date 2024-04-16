@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutique</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BOUTIQUE "LA AVENIDA"</h1>
+    </header>
+    <nav>
+        <a href="https://lain0907.github.io/">Inicio</a>
+    </nav>
+    <section>
+        <h2>Productos Destacados</h2>
+        <div class="producto">
+            <img src="https://raw.githubusercontent.com/lain0907/lain0907.github.io/main/CAMISA.jpg" alt="Camisa">
+            <h3>Camisa de Algodón</h3>
+            <p>Precio: $30</p>
+            <button class="add-to-cart" data-product="Camisa de Algodón" data-price="30">Añadir al Carrito</button>
+
+
+
+        </div>
+
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const addToCartButtons = document.querySelectorAll(".add-to-cart");
+
+            addToCartButtons.forEach(button => {
+                button.addEventListener("click", function() {
+                    const product = this.getAttribute("data-product");
+                    const price = parseFloat(this.getAttribute("data-price"));
+
+                    // Aquí puedes implementar la lógica para agregar el producto al carrito
+                    // Por ahora, simplemente mostramos una alerta con la información del producto añadido
+                    alert("Producto añadido al carrito:\n\n" + product + "\nPrecio: $" + price.toFixed(2));
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
