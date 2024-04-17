@@ -66,11 +66,20 @@
         
         <a href="https://lain0907.github.io/COMPRAR.html" class="button">Comprar</a>
          <a href="https://lain0907.github.io/CONTACTO.html" class="button">Contacto</a>
-         <button class="add-to-cart" data-product="Camisa de Algodón" data-price="30">Añadir al Carrito</button>
+         <button class="add-to-cart" data-product="Camisa de Algodón" data-price="30">Registrarse</button>
         <script>
-            function mostrarAlerta(){
-                alert("Gracias por registrarse");
-            }
+   <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const addToCartButtons = document.querySelectorAll(".add-to-cart");
+
+            addToCartButtons.forEach(button => {
+                button.addEventListener("click", function() {
+                    const product = this.getAttribute("data-product");
+                    const price = parseFloat(this.getAttribute("data-price"));
+
+                    // Aquí puedes implementar la lógica para agregar el producto al carrito
+                    // Por ahora, simplemente mostramos una alerta con la información del producto añadido
+                    alert("Gracias por registrarse:\n\n" + product + "\nPrecio: $" + price.toFixed(2));
         </script>
     </main>
     <div class="ubicacion">
